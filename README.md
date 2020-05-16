@@ -1,4 +1,30 @@
-# SPA: App de Contatos - PARTE 2
+<p align="center">
+  <img alt="screesnhot" style="padding-bottom: 5px;" src="./docs/logo.svg" />
+  
+  <h1 align="center">
+    SPA: App de Contatos
+  </h1>
+</p>
+
+<p align="center">
+  <img alt="Netlify Status" src="https://img.shields.io/netlify/58ab4f28-bf66-41aa-b0e0-81e0046f44fa">
+
+  <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/vs0uz4/aceleradev_spa_contacts_react">
+
+  <img alt="Repository Size" src="https://img.shields.io/github/repo-size/vs0uz4/aceleradev_spa_contacts_react">
+
+  <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/vs0uz4/aceleradev_spa_contacts_react/total">
+  
+  <a href="https://github.com/vs0uz4/aceleradev_spa_contacts_react/commits/master">
+    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/vs0uz4/aceleradev_spa_contacts_react">
+  </a>
+
+  <a href="https://github.com/vs0uz4/aceleradev_spa_contacts_react/issues">
+    <img alt="Repository Issues" src="https://img.shields.io/github/issues/vs0uz4/aceleradev_spa_contacts_react">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+</p>
 
 ## Objetivo:
 O desafio é desenvolver um *SPA (Single Page Application)* de uma lista de contatos em **React** com as seguintes funcionalidades:
