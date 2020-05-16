@@ -4,7 +4,7 @@ import { ReactComponent as LogoSvg } from '../../assets/img/logo.svg';
 import './style.scss';
 
 class Topbar extends React.Component {
-	render() {
+	render = () => {
 		return (
 			<header className="topbar" data-testid="topbar">
 				<div className="container">

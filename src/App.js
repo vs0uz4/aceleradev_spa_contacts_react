@@ -14,20 +14,25 @@ class App extends React.Component {
       contacts: [],
       contactsFiltered: [],
       filter: '',
-      orderBy: '',
+      orderBy: 'id',
 		  order: 'asc',
       isLoading: true,
       isFiltered: false,
       isOrdered: false,
     }
+  }
 
-    this.handleFilter = this.handleFilter.bind(this);
-    this.handleOrder = this.handleOrder.bind(this);
+  getFormatedUrl = () => {
+    const { filter, orderBy, order, isFiltered, isOrdered } = this.state;
+    const url = (isFiltered) 
+      ? `${baseURL}contacts?filter=${filter}&orderBy=${orderBy}&order=${order}` 
+      : `${baseURL}contacts?orderBy=${orderBy}&order=${order}`;
+    
+    return { url, isFiltered, isOrdered };
   }
 
   fecthContacts = () => {
-    const { filter, orderBy, order, isFiltered, isOrdered } = this.state;
-    const url = `${baseURL}contacts?filter=${filter}&orderBy=${orderBy}&order=${order}`;
+    const { url, isFiltered, isOrdered } = this.getFormatedUrl();
 
     fetch( url )
     .then( async response => {
@@ -43,28 +48,28 @@ class App extends React.Component {
     })
   }
 
-  handleFilter(filter) {
-    if (filter) {
-      this.setState( { filter, isFiltered: true }, this.fecthContacts );
-    }
+  handleFilter = (filter) => {
+    (filter) 
+      ? this.setState( { filter, isFiltered: true }, this.fecthContacts )
+      : this.setState( { filter, isFiltered: false }, this.fecthContacts )
   }
 
-  handleOrder(orderBy, order) {
+  handleOrder = (orderBy, order) => {
     this.setState( { orderBy, order, isOrdered: true }, this.fecthContacts );
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.fecthContacts();
   }
 
-  render() {
+  render = () => {
     const { contacts, contactsFiltered, isLoading, isFiltered, isOrdered } = this.state; 
     return (
-      <React.Fragment>
+      <div className="app" data-testid="app" >
         <Topbar />
         <Filters onFilter={ this.handleFilter } onOrder={ this.handleOrder } />
         <Contacts contactList={ (!isFiltered && !isOrdered) ? contacts : contactsFiltered }  isLoading= { isLoading }/>
-      </React.Fragment>
+      </div>
     )
   }
 }

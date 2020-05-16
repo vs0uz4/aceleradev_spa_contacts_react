@@ -8,33 +8,31 @@ class Filters extends React.Component {
 		this.txtFilter = React.createRef();
 		this.state = {
 		  filter: '',
-		  orderedBy: '',
+		  orderedBy: 'id',
 		  order: 'asc',
 		}
-		this.handleOrder = this.handleOrder.bind(this);
-		this.handleFilter = this.handleFilter.bind(this);
 	}
 
-	toggleOrder(){
+	toggleOrder = () => {
         const order = this.state.order;
         this.setState( order === 'asc' ? { order: 'desc' } : { order: 'asc' } ); 
     }
 
-	handleOrder(sort) {
+	handleOrder = (sort) => {
 		const { onOrder } = this.props;
 		this.toggleOrder();
 		this.setState({ orderedBy: sort } );
 		onOrder(sort, this.state.order);
 	}
 
-	handleFilter(event) {
+	handleFilter = (event) => {
 		const { onFilter } = this.props;
 		const filter = this.txtFilter.current.value.trim();
 		this.setState({ filter });
 		onFilter(filter);
 	}
 
-	render() {
+	render = () => {
 		const { orderedBy, order } = this.state;
 		return (
 			<div className="container" data-testid="filters">

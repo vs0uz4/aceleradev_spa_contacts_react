@@ -4,7 +4,7 @@ import Contact from '../Contact';
 import './style.scss';
 
 class Contacts extends React.Component {
-	render() {
+	render = () => {
     const { contactList, isLoading } = this.props;
 
 		return (
