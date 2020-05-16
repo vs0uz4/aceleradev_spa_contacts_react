@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="screesnhot" style="padding-bottom: 5px;" src="./docs/logo.svg" />
+  <img alt="screesnhot" style="padding-bottom: 5px;" width="200" src="./docs/logo.svg" />
   
   <h1 align="center">
     SPA: App de Contatos
