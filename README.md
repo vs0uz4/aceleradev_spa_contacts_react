@@ -1,4 +1,4 @@
-# SPA: App de Contatos - PARTE 1
+# SPA: App de Contatos - PARTE 2
 
 ## Objetivo:
 O desafio é desenvolver um *SPA (Single Page Application)* de uma lista de contatos em **React** com as seguintes funcionalidades:
@@ -11,11 +11,17 @@ O desafio é desenvolver um *SPA (Single Page Application)* de uma lista de cont
 
 GET: *https://5e82ac6c78337f00160ae496.mockapi.io/api/v1/contacts*
 
-### Requisitos - Parte 1:
+### Requisitos - Parte 2:
 
-- Modularize os componentes na pasta components.
-- Atualize os arquivos de componentes carregando corretamente seus estilos e suas marcações JSX.
+- Crie os *estados* do SPA.
+- Consuma a *API de contatos* no *ciclo de vida correto* do componente.
+- Implemente a **busca** para filtrar os contatos em tempo real.
+- Implemente os filtros de ordenação por *Nome*, *País*, *Empresa*, *Departamento* e *Data de Admissão*.
 
+### Dicas:
+
+- Tudo pode ser resolvido em um único componente.
+- O *estado* será mais complexo, ou seja, será um objeto com múltiplas *propriedades*.
 
 ### Iniciar o projeto:
 
@@ -24,14 +30,17 @@ GET: *https://5e82ac6c78337f00160ae496.mockapi.io/api/v1/contacts*
 
 **Preview:**
 
-[Contacts SPA](https://viniciusvinna.netlify.app/react-contacts/)
+[Contacts SPA](https://vimeo.com/414869096/55f4293a68)
 
 ## Tópicos:
 
 Neste desafio você vai praticar os seus conhecimentos em:
 
 - **React**
+- **React - Ciclo de vida de componentes**
 - **Modularização**
+- **Fetch API**
+- **JS:** *Array.map*, *Array.filter*, *Array.reduce*, *Array.find*, *Array.sort*
 
 ## Requisitos:
 
@@ -39,4 +48,9 @@ Neste desafio você vai praticar os seus conhecimentos em:
 * **[Create React App](https://github.com/facebook/create-react-app)**
 
 ## Screenshot de Referência
+
 ![](https://codenation-challenges.s3-us-west-1.amazonaws.com/react-14/screenshot.png)
+
+
+
+
